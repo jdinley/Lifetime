@@ -1,0 +1,31 @@
+body {
+  font-family: 'Roboto', serif;
+  font-size: 9px;
+  background: #fff9ed ;
+  text-align: center;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(75, 10px);
+  grid-auto-rows: 10px;
+  grid-gap: 2px;
+  justify-content: center;
+}
+
+.life {
+  /* border: 2px solid gray; */
+  border-radius: 50%;
+  background-color: lightblue;
+  padding: .2em; 
+  color: black;
+  font-size: 6px;
+}
+
+.age {
+  border-radius: 50%;
+  background-color: orangered;
+  padding: .2em; 
+  color: white;
+  font-size: 6px;
+}
