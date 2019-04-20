@@ -1,0 +1,24 @@
+{
+	"name": "lifetime",
+	"version": "1.0.0",
+	"description": "",
+	"main": "app.js",
+	"scripts": {
+		"dev": "parcel src/index.html",
+		"prod": "parcel build src/index.html"
+	},
+	"keywords": [],
+	"author": "John Dinley",
+	"license": "MIT",
+	"devDependencies": {
+		"@vue/component-compiler-utils": "^3.0.0",
+		"parcel-bundler": "^1.12.3",
+		"sass": "^1.19.0",
+		"vue-template-compiler": "^2.6.10"
+	},
+	"dependencies": {
+		"app.vue": "^0.1.10",
+		"vue": "^2.6.10",
+		"vue-hot-reload-api": "^2.3.3"
+	}
+}
