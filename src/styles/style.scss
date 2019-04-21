@@ -1,11 +1,18 @@
-$color-dots: #cc2924;
+// START Partial import
+@import '_styleTooltip';
+// END Partial import
+// Start variables
+$color-dot-age: #ff4500;
+$color-header: #cc2924;
 $color-background: #fefcf6;
 $color-font: #222;
+// END variables
+
+// Begin styling
 body {
 	font-family: 'Open Sans', sans-serif;
 	background: $color-background;
 }
-
 input {
 	background: white;
 	border: none;
@@ -28,7 +35,7 @@ input:focus {
 .header {
 	grid-column: 1/5;
 	grid-row: 1;
-	color: $color-dots;
+	color: $color-header;
 	font-size: 40pt;
 }
 
@@ -40,11 +47,10 @@ input:focus {
 .paragraph {
 	color: $color-font;
 	font-size: 9pt;
-}
-
-.paragraph h1 {
-	font-size: 10.5pt;
-	font-style: bold;
+	h1 {
+		font-size: 10.5pt;
+		font-style: bold;
+	}
 }
 
 .main {
@@ -61,8 +67,13 @@ input:focus {
 	justify-content: center;
 }
 
-.life {
+// Extend / Inheritance
+@mixin dots-shared() {
 	border-radius: 50%;
+	padding: .2em;
+}
+.life {
+	@include dots-shared();
 	background-color: lightblue;
 	padding: .2em;
 	color: black;
@@ -70,20 +81,17 @@ input:focus {
 }
 
 .age {
-	border-radius: 50%;
+	@include dots-shared();
 	background-color: orangered;
-	padding: .2em;
 	color: white;
 	font-size: 6px;
 }
 .ageSingle {
-	border-radius: 50%;
-	background-color: orangered;
-	padding: .2em;
-	color: white;
-	font-size: 6px;
-	height: 10px;
-	width: 10px;
+	@include dots-shared();
+	display: inline-block;
+	background-color: $color-dot-age;
+	height: 5px;
+	width: 5px;
 }
 /* Radio Button Begin*/
 input[type='radio'] {
