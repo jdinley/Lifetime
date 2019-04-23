@@ -1,5 +1,7 @@
+import Vue from "vue";
+
 new Vue({
-	el: ".container",
+	el: "#app",
 
 	data: {
 		age: "45",
